@@ -1,2 +1,2 @@
-# Trimage
-A tool to create pretty triangular mesh representations from images
+# Trimage - Triangular Imaging
+A command line tool to convert images to pretty triangularized versions of themselves.
