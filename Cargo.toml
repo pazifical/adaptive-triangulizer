@@ -8,3 +8,4 @@ edition = "2018"
 [dependencies]
 image = "0.23.14"
 spade = "1.8.2"
+rand = "0.8.4"
