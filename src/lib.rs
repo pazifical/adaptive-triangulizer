@@ -32,7 +32,7 @@ pub fn run() {
     // Step 0: Parsing command line arguments
     // TODO: Parse command line arguments to assign these variables
     let path = PathBuf::from("/home/minerva/Programming/Trimage/data/2017_China_Chongqing_Boats.jpg");
-    let path_out = PathBuf::from("/home/minerva/Programming/Trimage/temp/2017_China_Chongqing_Boats.jpg");
+    let path_out = PathBuf::from("/home/minerva/Programming/Trimage/data/out/2017_China_Chongqing_Boats.jpg");
     let n_initial_points = 5000;
 
     // Step 1: Importing the image from a given path
@@ -76,6 +76,6 @@ fn delaunay_of_random_image_pixels(img: &DynamicImage, n_points: usize) -> Mesh 
 // TODO: Add command line parsing here
 fn parse_arguments() -> Config {
     Config {
-        path_in: PathBuf::from("a");
+        path_in: PathBuf::from("a")
     }
 }
