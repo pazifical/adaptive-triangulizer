@@ -1,13 +1,15 @@
 # <u>AdapTri</u> - Adaptive Triangulizer
+[![Build Status](https://travis-ci.org/TwoWaySix/adaptive-triangulizer.png?branch=master)](https://travis-ci.org/TwoWaySix/adaptive-triangulizer)
+
 
 **AdapTri** is a command line tool to convert images to ***pretty triangularized versions of themselves***. It is written in Rust 🦀 and can be either easily compiled 🔧 or downloaded as a release binary 📩. 
 
 Using mesh generation techniques from the scientific field of ***computational fluid dynamics*** 🌊, the underlying details of the input image can be preserved and result in a high quality triangular representation 🖼️.
 
 <img src="https://raw.githubusercontent.com/TwoWaySix/adaptive-triangulizer/main/data/2017_China_Chongqing_Boats.jpg" 
-   style="width: 450px; height: auto; margin: auto">
+   style="width: 400px; height: auto; margin: auto">
 <img src="https://raw.githubusercontent.com/TwoWaySix/adaptive-triangulizer/main/data/out/2017_China_Chongqing_Boats.jpg" 
-   style="width: 450px; height: auto; margin: auto">
+   style="width: 400px; height: auto; margin: auto">
    
    
 ### 🤔 Yet another image triangulizer?
