@@ -2,9 +2,8 @@
 use std::path::Path;
 
 // Community library imports
-use image::DynamicImage;
 use image::io::Reader as ImageReader;
-
+use image::DynamicImage;
 
 pub fn import_image_from_path(path: &Path) -> DynamicImage {
     let img_reader = match ImageReader::open(path) {

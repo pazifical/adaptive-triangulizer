@@ -2,5 +2,5 @@
 use std::path::PathBuf;
 
 pub struct Config {
-    pub path_in: PathBuf
+    pub path_in: PathBuf,
 }

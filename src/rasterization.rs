@@ -13,7 +13,6 @@ use crate::topology::is_point_in_triangle;
 type Mesh = DelaunayTriangulation<Point, FloatKernel, DelaunayWalkLocate>;
 // type Element = [VertexHandle<Point>; 3];
 
-
 pub fn rasterize_mesh(mesh: &Mesh, width: i32, height: i32) -> RgbaImage {
     let mut img = ImageBuffer::new(width as u32, height as u32);
     for face in mesh.triangles() {

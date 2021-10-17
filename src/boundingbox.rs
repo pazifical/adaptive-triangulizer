@@ -4,12 +4,11 @@ use spade::delaunay::VertexHandle;
 // Crate imports
 use crate::point::Point;
 
-
 pub struct BoundingBox {
     pub xmin: f32,
     pub xmax: f32,
     pub ymin: f32,
-    pub ymax: f32
+    pub ymax: f32,
 }
 
 impl BoundingBox {
@@ -20,11 +19,24 @@ impl BoundingBox {
         let mut ymax = -100000.;
 
         for point in triangle.iter() {
-            if point.x < xmin { xmin = point.x; }
-            if point.x > xmax { xmax = point.x; }
-            if point.y < ymin { ymin = point.y; }
-            if point.y > ymax { ymax = point.y; }
+            if point.x < xmin {
+                xmin = point.x;
+            }
+            if point.x > xmax {
+                xmax = point.x;
+            }
+            if point.y < ymin {
+                ymin = point.y;
+            }
+            if point.y > ymax {
+                ymax = point.y;
+            }
         }
-        BoundingBox { xmin, xmax, ymin, ymax }
+        BoundingBox {
+            xmin,
+            xmax,
+            ymin,
+            ymax,
+        }
     }
 }
