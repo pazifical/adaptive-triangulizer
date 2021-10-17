@@ -31,9 +31,9 @@ pub fn run() {
     // Step 0: Parsing command line arguments
     // TODO: Parse command line arguments to assign these variables
     let path =
-        PathBuf::from("/home/minerva/Programming/Trimage/data/2017_China_Chongqing_Boats.jpg");
+        PathBuf::from("./data/2017_China_Chongqing_Boats.jpg");
     let path_out =
-        PathBuf::from("/home/minerva/Programming/Trimage/data/out/2017_China_Chongqing_Boats.jpg");
+        PathBuf::from("./data/out/2017_China_Chongqing_Boats.jpg");
     let n_initial_points = 5000;
 
     // Step 1: Importing the image from a given path
