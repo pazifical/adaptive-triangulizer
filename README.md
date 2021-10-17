@@ -1,8 +1,8 @@
 # AdapTri - Adaptive Triangulizer
 
-**AdapTri** is a command line tool to convert images to pretty triangularized versions of themselves. It is written in Rust 🦀 and can be either easily compiled or downloaded as a release binary. 
+**AdapTri** is a command line tool to convert images to ***pretty triangularized versions of themselves***. It is written in Rust 🦀 and can be either easily compiled 🔧 or downloaded as a release binary 📩. 
 
-Using mesh generation techniques from the scientific field of ***computational fluid dynamics***, the underlying details of the input image can be preserved and result in a high quality triangular representation.
+Using mesh generation techniques from the scientific field of ***computational fluid dynamics*** 🌊, the underlying details of the input image can be preserved and result in a high quality triangular representation 🖼️.
 
 <img src="https://raw.githubusercontent.com/TwoWaySix/adaptive-triangulizer/main/data/2017_China_Chongqing_Boats.jpg" 
    style="width: 450px; height: auto; margin: auto">
@@ -12,7 +12,7 @@ Using mesh generation techniques from the scientific field of ***computational f
    
 ### 🤔 Yet another image triangulizer?
 
-You may have seen an image like the second one, right? There are many open and closed source solutions to convert a regular image to one that consists of single colored triangles. Some of them create pretty ones, some of them not. But you might have not seen one where the ***triangle size adapts to the underlying structure***  of the input image. This is achieved by an ***iterative mesh refinement strategy***.
+You may have seen an image like the second one, right? There are many open and closed source solutions to convert a regular image to one that consists of single colored triangles. Some of them create pretty ones, some of them not. But you might have not seen one where the ***triangle size adapts to the underlying structure*** 🏗️ of the input image. This is achieved by an ***iterative mesh refinement strategy*** 🕷️.
 
 
 ### 🕸️ What is a Mesh?
@@ -26,5 +26,20 @@ The most widely used technique to create a Mesh is the **Delaunay Triangulation*
 
 ### ♻️ How does the iterative refinement work?
 
-After the initial
+After the initial triangulation of the image, each triangle's **centroid** 🎯 is closer inspected: The interpolated color is compared to the color of the underlying original image. If the difference is greater than a given threshold, a new vertex with the underlying color will be inserted at that position. After all triangles are inspected, the new set of vertices is triangulated again 🕸️.
 
+
+### 📝 What's left to do:
+
+- [ ] Implement mesh refinement
+- [ ] Implement command line parsing
+
+<br><br>
+
+## 🔉 How to compile and/or run the program
+
+If you have Rust (and Cargo) installed, the easiest way is to run the following code in the top directory:
+```
+cargo build --release
+```
+This will result in a compilation of the program. After it's finished, an executable will be created in the /target/release directory. 
