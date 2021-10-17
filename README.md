@@ -1,5 +1,14 @@
 # <u>AdapTri</u> - Adaptive Triangulizer
 [![Build Status](https://app.travis-ci.com/TwoWaySix/adaptive-triangulizer.svg?branch=main)](https://app.travis-ci.com/TwoWaySix/adaptive-triangulizer)
+[![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
+[![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
+[![Windows](https://svgshare.com/i/ZhY.svg)](https://svgshare.com/i/ZhY.svg)
+[![GitHub license](https://img.shields.io/github/license/TwoWaySix/adaptive-triangulizer.svg)](https://github.com/TwoWaySix/adaptive-triangulizer/blob/master/LICENSE)
+[![GitHub branches](https://badgen.net/github/branches/TwoWaySix/adaptive-triangulizer)](https://github.com/TwoWaySix/adaptive-triangulizer/)
+[![GitHub release](https://img.shields.io/github/release/TwoWaySix/adaptive-triangulizer.svg)](https://GitHub.com/TwoWaySix/adaptive-triangulizer/releases/)
+[![Github all releases](https://img.shields.io/github/downloads/TwoWaySix/adaptive-triangulizer/total.svg)](https://GitHub.com/TwoWaySix/adaptive-triangulizer/releases/)
+
+
 
 **AdapTri** is a command line tool to convert images to ***pretty triangularized versions of themselves***. It is written in Rust 🦀 and can be either easily compiled 🔧 or downloaded as a release binary 📩. 
 
