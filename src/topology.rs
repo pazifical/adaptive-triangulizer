@@ -1,5 +1,5 @@
 // Community library imports
-use spade::delaunay::VertexHandle;
+use spade::delaunay::{VertexHandle, FloatDelaunayTriangulation};
 
 // Crate imports
 use crate::point::Point;
