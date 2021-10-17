@@ -1,4 +1,4 @@
-# AdapTri - Adaptive Triangulizer
+# <u>AdapTri</u> - Adaptive Triangulizer
 
 **AdapTri** is a command line tool to convert images to ***pretty triangularized versions of themselves***. It is written in Rust 🦀 and can be either easily compiled 🔧 or downloaded as a release binary 📩. 
 
