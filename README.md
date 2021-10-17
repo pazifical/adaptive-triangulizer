@@ -3,6 +3,11 @@
 
 Many people have seen those images, where 
 
+<img src="https://raw.githubusercontent.com/TwoWaySix/adaptive-triangulizer/main/data/2017_China_Chongqing_Boats.jpg" 
+   style="width: 450px; height: auto; margin: auto">
+<img src="https://raw.githubusercontent.com/TwoWaySix/adaptive-triangulizer/main/data/out/2017_China_Chongqing_Boats.jpg" 
+   style="width: 450px; height: auto; margin: auto">
+       
 <table>
     <tr>
     <td>
