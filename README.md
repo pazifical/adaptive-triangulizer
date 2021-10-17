@@ -1,6 +1,5 @@
 # <u>AdapTri</u> - Adaptive Triangulizer
-[![Build Status](https://travis-ci.org/TwoWaySix/adaptive-triangulizer.png?branch=master)](https://travis-ci.org/TwoWaySix/adaptive-triangulizer)
-
+[![Build Status](https://app.travis-ci.com/TwoWaySix/adaptive-triangulizer.svg?branch=main)](https://app.travis-ci.com/TwoWaySix/adaptive-triangulizer)
 
 **AdapTri** is a command line tool to convert images to ***pretty triangularized versions of themselves***. It is written in Rust 🦀 and can be either easily compiled 🔧 or downloaded as a release binary 📩. 
 
