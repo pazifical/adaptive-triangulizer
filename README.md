@@ -7,9 +7,9 @@
 Using mesh generation techniques from the scientific field of ***computational fluid dynamics*** 🌊, the underlying details of the input image can be preserved and result in a high quality triangular representation 🖼️.
 
 <img src="https://raw.githubusercontent.com/TwoWaySix/adaptive-triangulizer/main/data/2017_China_Chongqing_Boats.jpg" 
-   style="width: 450px; height: auto; margin: auto">
+   style="width: 400px; height: auto; margin: auto">
 <img src="https://raw.githubusercontent.com/TwoWaySix/adaptive-triangulizer/main/data/out/2017_China_Chongqing_Boats.jpg" 
-   style="width: 450px; height: auto; margin: auto">
+   style="width: 400px; height: auto; margin: auto">
    
    
 ### 🤔 Yet another image triangulizer?
