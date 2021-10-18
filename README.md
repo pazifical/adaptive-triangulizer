@@ -1,5 +1,6 @@
 # <u>AdapTri</u> - Adaptive Triangulizer
 [![Build Status](https://app.travis-ci.com/TwoWaySix/adaptive-triangulizer.svg?branch=main)](https://app.travis-ci.com/TwoWaySix/adaptive-triangulizer)
+[![codecov](https://codecov.io/gh/TwoWaySix/adaptive-triangulizer/branch/main/graph/badge.svg?token=2MZCDM1QPQ)](https://codecov.io/gh/TwoWaySix/adaptive-triangulizer)
 [![GitHub release](https://img.shields.io/github/release/TwoWaySix/adaptive-triangulizer.svg)](https://GitHub.com/TwoWaySix/adaptive-triangulizer/releases/)
 
 
