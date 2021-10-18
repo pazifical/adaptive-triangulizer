@@ -46,4 +46,4 @@ If you have Rust (and Cargo) installed, the easiest way is to run the following 
 ```
 cargo build --release
 ```
-This will result in a compilation of the program. After it's finished, an executable will be created in the /target/release directory. 
+This will result in the compilation of the program. After it's finished, an executable will be created in the /target/release directory. 
