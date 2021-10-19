@@ -20,6 +20,32 @@ pub fn interpolate_triangle_average_color(triangle: &[VertexHandle<Point>; 3]) -
     ])
 }
 
+pub fn interpolate_triangle_centroid(triangle: &[VertexHandle<Point>; 3]) -> Point {
+    let mut x = 0.0;
+    let mut y = 0.0;
+    let mut color = [0.0; 3];
+
+    for i in 0..3 {
+        x += triangle[i].x;
+        y += triangle[i].y;
+        color[0] += triangle[i].c[0] as f32;
+        color[1] += triangle[i].c[1] as f32;
+        color[2] += triangle[i].c[2] as f32;
+    }
+    let c = Rgba([
+        (color[0] / 3.0) as u8,
+        (color[1] / 3.0) as u8,
+        (color[2] / 3.0) as u8,
+        255,
+    ]);
+
+    Point::new(
+        x/3.0,
+        y/3.0,
+        c
+    )
+}
+
 pub fn interpolate_rgba_in_triangle(
     point: &Point,
     triangle: &[VertexHandle<Point>; 3],

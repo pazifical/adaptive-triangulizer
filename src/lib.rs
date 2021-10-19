@@ -21,6 +21,7 @@ use spade::kernels::FloatKernel;
 use crate::config::Config;
 use crate::io::import_image_from_path;
 use crate::point::Point;
+use crate::refinement::refine_mesh_by_centroid;
 use crate::rasterization::rasterize_mesh;
 
 // Type definitions
@@ -34,7 +35,9 @@ pub fn run() {
         PathBuf::from("./data/2017_China_Chongqing_Boats.jpg");
     let path_out =
         PathBuf::from("./data/out/2017_China_Chongqing_Boats.jpg");
-    let n_initial_points = 5000;
+    let n_initial_points = 100;
+    let iterations = 5;
+    let max_diff = 10;
 
     // Step 1: Importing the image from a given path
     let img = import_image_from_path(&path);
@@ -43,7 +46,9 @@ pub fn run() {
     let mut delaunay = delaunay_of_random_image_pixels(&img, n_initial_points);
 
     // Step 3: Refining the Mesh
-    // TODO: Implement Mesh refinement
+    for _ in 0..iterations {
+        refine_mesh_by_centroid(&mut delaunay, &img, max_diff);
+    }
 
     // Step 4: Creating an image from the mesh by rasterization
     let img_out = rasterize_mesh(&delaunay, img.width() as i32, img.height() as i32);
@@ -54,8 +59,13 @@ fn delaunay_of_random_image_pixels(img: &DynamicImage, n_points: usize) -> Mesh 
     let (width, height) = img.dimensions();
     let mut delaunay = FloatDelaunayTriangulation::with_walk_locate();
 
+    delaunay.insert(Point::new(0.0, 0.0, img.get_pixel(0, 0)));
+    delaunay.insert(Point::new((width-1) as f32, 0.0, img.get_pixel(width-1, 0)));
+    delaunay.insert(Point::new(0.0, (height-1) as f32, img.get_pixel(0, height-1)));
+    delaunay.insert(Point::new((width-1) as f32, (height-1) as f32, img.get_pixel(width-1, height-1)));
+
     let mut rng = rand::thread_rng();
-    for _ in 0..n_points {
+    for _ in 0..(n_points-4) {
         let rnd_x = rng.gen::<f32>() * (width as f32);
         let rnd_y = rng.gen::<f32>() * (height as f32);
 
