@@ -66,4 +66,15 @@ mod topology_tests {
             assert_eq!(is_point_in_triangle(&point_out, &triangle), false);
         }
     }
+
+    #[test]
+    fn test_is_ccw() {
+        let p1 = Point::new(0.0, 0.0, Rgba([0; 4]));
+        let p2 = Point::new(1.0, 0.0, Rgba([0; 4]));
+        let p3 = Point::new(0.0, 1.0, Rgba([0; 4]));
+
+        assert_eq!(is_ccw(&p1, &p2, &p3), true);
+        assert_eq!(is_ccw(&p3, &p2, &p1), false);
+
+    }
 }
