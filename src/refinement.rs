@@ -23,7 +23,7 @@ pub fn refine_mesh_by_centroid(mesh: &mut Mesh, img: &DynamicImage, max_diff: i3
         let diff_g = ((centroid.c[1] as i32) - (orig_color[1] as i32)).abs();
         let diff_b = ((centroid.c[2] as i32) - (orig_color[2] as i32)).abs();
 
-        if diff_r > max_diff || diff_b > max_diff || diff_b > max_diff {
+        if diff_r > max_diff || diff_g > max_diff || diff_b > max_diff {
             centroid.c = orig_color;
             new_points.push(centroid);
         }

@@ -150,4 +150,44 @@ mod interpolation_tests {
             assert_eq!(c, Rgba([255/3, 255/3, 255/3, 255]));
         }
     }
+
+
+    #[test]
+    fn test_interpolate_triangle_centroid() {
+        let mesh = create_simple_triangulation();
+        for face in mesh.triangles() {
+            let triangle = face.as_triangle();
+            let c = interpolate_triangle_centroid(&triangle);
+
+            assert_eq!(c.x, 10.0/3.0);
+            assert_eq!(c.y, 10.0/3.0);
+            assert_eq!(c.c, Rgba([255/3, 255/3, 255/3, 255]));
+        }
+    }
+
+    #[test]
+    fn test_interpolate_colour_in_triangle() {
+        let mesh = create_simple_triangulation();
+        let p1 = Point::new(0.0, 0.0, Rgba([255, 0, 0, 255]));
+        let p2 = Point::new(10.0, 0.0, Rgba([0, 255, 0, 255]));
+        let p3 = Point::new(0.0, 10.0, Rgba([0, 0, 255, 255]));
+        let p4 = Point::new(10.0/3.0, 10.0/3.0, Rgba([85, 84, 84, 255]));
+        let p5 = Point::new(0.2, 0.3,Rgba([242, 5, 7, 255]));
+
+        for face in mesh.triangles() {
+            let triangle = face.as_triangle();
+
+            let c1 = interpolate_rgba_in_triangle(&p1, &triangle);
+            let c2 = interpolate_rgba_in_triangle(&p2, &triangle);
+            let c3 = interpolate_rgba_in_triangle(&p3, &triangle);
+            let c4 = interpolate_rgba_in_triangle(&p4, &triangle);
+            let c5 = interpolate_rgba_in_triangle(&p5, &triangle);
+
+            assert_eq!(c1, p1.c);
+            assert_eq!(c2, p2.c);
+            assert_eq!(c3, p3.c);
+            assert_eq!(c4, p4.c);
+            assert_eq!(c5, p5.c);
+        }
+    }
 }

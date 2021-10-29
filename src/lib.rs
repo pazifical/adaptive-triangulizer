@@ -28,6 +28,7 @@ use crate::rasterization::rasterize_mesh;
 type Mesh = DelaunayTriangulation<Point, FloatKernel, DelaunayWalkLocate>;
 
 // Starting point of command line program
+// TODO: Put this into a separate binary. After all, this should be a library
 pub fn run() {
     // Step 0: Parsing command line arguments
     // TODO: Parse command line arguments to assign these variables
@@ -36,8 +37,8 @@ pub fn run() {
     let path_out =
         PathBuf::from("./data/out/2017_China_Chongqing_Boats.jpg");
     let n_initial_points = 100;
-    let iterations = 5;
-    let max_diff = 10;
+    let iterations = 4;
+    let max_diff = 15;
 
     // Step 1: Importing the image from a given path
     let img = import_image_from_path(&path);

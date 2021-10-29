@@ -24,3 +24,15 @@ pub fn import_image_from_path(path: &Path) -> DynamicImage {
         }
     }
 }
+
+#[cfg(test)]
+mod io_tests {
+    use std::path::PathBuf;
+    use super::*;
+
+    #[test]
+    fn test_import_working() {
+        let path = PathBuf::from("./data/2017_China_Chongqing_Boats.jpg");
+        let img = import_image_from_path(&path);
+    }
+}
