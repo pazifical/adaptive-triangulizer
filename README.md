@@ -36,7 +36,6 @@ After the initial triangulation of the image, each triangle's **centroid** 🎯 
 
 ### 📝 What's left to do:
 
-- [ ] Implement mesh refinement
 - [ ] Implement command line parsing
 
 <br><br>
