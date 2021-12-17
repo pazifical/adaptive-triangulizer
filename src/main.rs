@@ -1,4 +1,4 @@
-use trimage::run;
+use adaptri::run;
 
 fn main() {
     run();
