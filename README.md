@@ -36,7 +36,8 @@ After the initial triangulation of the image, each triangle's **centroid** 🎯 
 
 ### 📝 What's left to do:
 
-- [ ] Implement command line parsing
+- [x] Implement command line parsing
+- [ ] Improve input error handling
 
 <br><br>
 
