@@ -117,12 +117,18 @@ fn parse_arguments() -> Config {
             )
         )
     );
-    println!("Out path: {}", path_out.to_str().unwrap());
 
     // TODO: Handle wrong input better
     let n_initial_points =matches.value_of("points").unwrap().parse::<usize>().unwrap_or(100);
     let n_iterations = matches.value_of("iterations").unwrap().parse::<i32>().unwrap_or(4);
     let max_diff = matches.value_of("max_diff").unwrap().parse::<i32>().unwrap_or(15);
+
+    println!("\nChosen parameters:");
+    println!("- Input path:    {}", path_in.to_str().unwrap());
+    println!("- Out path:      {}", path_out.to_str().unwrap());
+    println!("- Initial nodes: {}", n_initial_points);
+    println!("- Iterations:    {}", n_iterations);
+    println!("- Max. diff:     {}", max_diff);
 
     Config { path_in, path_out, n_initial_points, n_iterations, max_diff }
 }
